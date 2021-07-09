@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko-KO">
+	<title>hello world</title>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<h1>hello world</h1>
+	</head>
+	<body>
+		<input
+			type="button"
+			id = "abc"
+			value="1"
+			onclick="
+				if (document.querySelector('#abc').value === '1'){
+					document.querySelector('body').style.backgroundColor='black';
+			}
+		">
+		<input
+		type="button"
+		id="def"
+		value="2"
+		onclick="
+			if (document.querySelector('#def').value === '2'){
+				document.querySelector('body').style.backgroundColor='cyan';
+		}
+		">
+	</body>
+</html>

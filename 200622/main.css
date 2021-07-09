@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+article{color:blue; text-decoration:underline;}
+li{font-size:25px;}
+#first {
+	font-size:35px;
+	color:#252525;
+	text-align:center;
+}
+#second {
+	font-size:50px;
+	color:#ff00ff;
+	text-align:right;
+}
+.category {
+	background:yellow; 
+	color:red;
+	font-size:55px
+}
+
