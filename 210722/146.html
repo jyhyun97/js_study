@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 처리하기 예제</title>
+    <script>
+        const inputContainer = document.getElementById("input-container");//dom이 완성되기 전에 js가 실행되어 null값이 나온다
+        console.log(inputContainer);//null
+        document.addEventListener('DOMContentLoaded', e => {//DOMContentLoaded는 html 전체가 로드되고 dom 트리가 완성되면 호출됨. dom이 생성되기 전에 js코드가 실행됨을 방지.
+            const inputContainer = document.getElementById("input-container");//input과 버튼이 있는 div 태그 가져오기.
+            console.log(inputContainer);//div 태그가 나옴
+            const inputEl = inputContainer.querySelector('input'); //input태그
+            inputEl.addEventListener('keydown', e => {//input에 keydown 이벤트가 발생 시 동작
+                console.log(`keycode : ${e.keyCode}`);//keycode 출력. 리눅스랑 키값이 다르다..
+            });
+
+            const buttonEl = inputContainer.querySelector('button');//버튼 태그
+            buttonEl.addEventListener('click', e => {//button에 click 이벤트가 발생 시 동작
+                console.log(e.target);//e.target은 본 태그
+                console.log(`input value: ${inputEl.value}`);//inputEl.value는 input태그의 값
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="input-container">
+        <input type="text">
+        <button>버튼</button>
+    </div>>    
+</body>
+</html>
